@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600");
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --main-background-color: hsl(217, 54%, 11%);
+  --card-background-color: hsl(216, 50%, 16%);
+  --line-color: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+  background-color: var(--main-background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+main {
+  background-color: var(--card-background-color);
+  max-width: 350px;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 25px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+main .img-wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+main .img-wrapper .top {
+  opacity: 0;
+}
+
+main .img-wrapper .top .layer {
+  position: absolute;
+  background-color: var(--cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5;
+}
+
+main .img-wrapper .top .view {
+  width: 20%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main .img-wrapper img {
+  width: 100%;
+  display: block;
+}
+
+main h1 {
+  color: var(--white);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+main p {
+  color: var(--soft-blue);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+main .line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .line .currency {
+  color: var(--cyan);
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+main .line .time {
+  color: var(--soft-blue);
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+main .created {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--line-color);
+  margin-top: 0.25rem;
+  padding: 1rem 0;
+  gap: 1rem;
+}
+
+main .created img {
+  width: 10%;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
+
+main .created p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+main .created .name {
+  color: var(--white);
+}
+
+main .created .name:hover,
+h1:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+main .img-wrapper .top:hover {
+  opacity: 1;
+  cursor: pointer;
+}
